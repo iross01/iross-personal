@@ -1,0 +1,41 @@
+.nav-bar{
+	width: 95%;
+	padding-top: 20px;
+	position: fixed;
+	z-index: 2;
+
+	.logo{
+		background: url('../../assets/iross-logo.png');
+		background-size: cover;
+		height: 30px;
+		width: 30px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		float: left;
+		margin-left: 20px;
+	}
+	
+	ul{		
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		
+		li{
+			display: inline-block;
+			padding-left: 20px;
+			cursor: pointer;
+
+			a{
+				color: #AAA;
+				text-decoration: none;
+				cursor: pointer;
+				font-family: 'Libre Franklin', sans-serif;
+
+				&:hover{
+					color: #EEE;
+				}
+			}
+		}
+	}
+}
