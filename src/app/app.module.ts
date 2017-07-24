@@ -4,24 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { IntroComponent } from './body/intro/intro.component';
 import { AboutComponent } from './body/about/about.component';
-import { ProjectsComponent } from './body/projects/projects.component';
+import { SkillsComponent } from './body/skills/skills.component';
 import { ContactComponent } from './body/contact/contact.component';
+import { ExperienceComponent } from './body/experience/experience.component';
+import { EducationComponent } from './body/education/education.component';
 import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    IntroComponent,
     AboutComponent,
-    ProjectsComponent,
+    SkillsComponent,
     ContactComponent,
-    BodyComponent
+    BodyComponent,
+    ExperienceComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,

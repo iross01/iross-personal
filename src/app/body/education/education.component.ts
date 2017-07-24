@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'projects',
-  templateUrl: './projects.component.html',
+  selector: 'education',
+  templateUrl: './education.component.html',
   styleUrls: ['../../sass/body.scss']
 })
-export class ProjectsComponent {
+export class EducationComponent {
   title = 'app works!';
 }
