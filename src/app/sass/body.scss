@@ -27,7 +27,7 @@
 }
 
 .home-section.right{
-	background-color: #EEE;
+	background-color: #f9f9f9;
   order: 1;
   width: 55%;  
   color: #666;
@@ -64,9 +64,10 @@
   }
 }
 
-*{
+h1, h2, h3, h4{
   font-family: 'Montserrat', sans-serif;
 }
+
 
 h1{
   font-size: 3.5em;
@@ -89,13 +90,20 @@ h5{
 
 .experience{
   margin-top: 55px;
+  h2{
+    margin-bottom: -10px;
+  }
   .info-container{
     margin-top: 25px;
   }
 }
 
 .contact{
-  margin-top: -10px;
+  margin-top: -45px;
+}
+
+.education{
+  margin-top: 5px;
 }
 
 .skills{
@@ -119,7 +127,7 @@ ul{
 }
 
 .about{
-  margin-top: 75px;
+  margin-top: 106px;
   p{
     width: 80%;
   }
