@@ -1,24 +1,25 @@
 body{
-  width: 100%;
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    max-height: 950px;
 }
 
 .main-container{
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
-
-  height: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    margin: 0 auto;
+    max-width: 900px;
+    height: 100%;
 }
+
 html {
-    /* To make use of full height of page*/
-    min-height: 100%;
-    margin: 0;
-}
-body {
     min-height: 100%;
     margin: 0;
 }
