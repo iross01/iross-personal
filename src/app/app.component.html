@@ -1,5 +1,8 @@
 <div class="main-container">
-	<body></body>
+	<div [hidden]="showBody" (click)="toggleShowBody()" class="placeholder">
+			<img src="assets/iross-logo.png" alt="">
+	</div>
+	<body [hidden]="!showBody" (close)="toggleShowBody()"></body>
 </div>
 
 		

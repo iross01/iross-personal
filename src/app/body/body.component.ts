@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { AboutComponent } from './about/about.component';
 import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
@@ -8,8 +8,15 @@ import { ContactComponent } from './contact/contact.component';
 @Component({
   selector: 'body',
   templateUrl: './body.component.html',
-  styleUrls:['../sass/body.scss']
+  styleUrls:['../sass/body.scss'],
+  outputs:['close']
 })
 export class BodyComponent {
-  title = 'app works!';
+
+	public close: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+	emitClose(){
+		this.close.emit(true);
+	}
+
 }

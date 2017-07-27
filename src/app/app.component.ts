@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls:['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+
+	public showBody:boolean = false;
+
+	constructor(){
+		
+	}
+
+	toggleShowBody(){
+		this.showBody = !this.showBody;
+	}
 }

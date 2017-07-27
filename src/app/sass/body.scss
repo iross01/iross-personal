@@ -135,3 +135,21 @@ ul{
     font-weight: normal;
   }
 }
+
+.close{
+	position: absolute;
+	right: 20px;
+	top: 5px;
+	background: #333;
+	color: #f9f9f9;
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	padding-top: 3px;
+	font-weight: 300;
+}
+
+.resume{
+	position: relative;
+}
