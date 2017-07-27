@@ -1,8 +1,8 @@
 <div class="main-container">
-	<div [hidden]="showBody" (click)="toggleShowBody()" class="placeholder">
-			<img src="assets/iross-logo.png" alt="">
+	<div (click)="toggleShowBody()" class="placeholder">
+			<img [class.dontShow]="showBody" [class.show]="!showBody" src="assets/iross-logo.png" alt="">
 	</div>
-	<body [hidden]="!showBody" (close)="toggleShowBody()"></body>
+	<body  class="resume-body" [class.dontShow]="!showBody" [class.show]="showBody" (close)="toggleShowBody()"></body>
 </div>
 
 		
