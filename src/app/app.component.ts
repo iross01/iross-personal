@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +7,31 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-	public showBody:boolean = false;
+	@ViewChild('logo') logo;
 
-	constructor(){
-		
+	public navOpen:boolean = false;
+	public resumeOpen:boolean = false;
+
+	@HostListener('mousemove', ['$event'])
+
+    onMousemove(event: MouseEvent) {
+    	// this.logo.nativeElement.style.webkitTransform = 'translate3d(' + event.clientX*0.1 + 'px, ' + event.clientY*0.1 + 'px, 0px)';
 	}
 
-	toggleShowBody(){
-		this.showBody = !this.showBody;
+
+    constructor(elementRef: ElementRef) {
+    }
+
+	ngOnInit(){
 	}
+
+	toggleNavOpen(){
+		this.navOpen = !this.navOpen;
+	}
+	
+	toggleResumeOpen(){
+		this.resumeOpen = !this.resumeOpen;
+	}
+
+
 }

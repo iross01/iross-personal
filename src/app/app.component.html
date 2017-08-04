@@ -1,8 +1,22 @@
-<div class="main-container">
-	<div (click)="toggleShowBody()" class="placeholder">
-			<img [class.dontShow]="showBody" [class.show]="!showBody" src="assets/iross-logo.png" alt="">
+<div  class="main-container">
+	<div class="placeholder">
+		<div class="name-container">
+			<h1>iain</h1>
+			<h1>ross</h1>
+		</div>
+		<div mousemove #logo (click)="toggleNavOpen()" class="iross-logo" [class.dontShow]="navOpen" [class.show]="!navOpen">
+			<img style="top:0px;left: 0px" src="assets/top-left.svg" alt="">	
+			<img style="top:0px;right: 0px" src="assets/top-right.svg" alt="">	
+			<img style="bottom:0px;right: 0px" src="assets/bottom-right.svg" alt="">	
+			<img style="bottom:0px;left: 0px" src="assets/bottom-left.svg" alt="">	
+		</div>
+		<ul [class.dontShow]="!navOpen" [class.show]="navOpen">
+			<li id="about">about</li>
+			<li id="resume" (click)="toggleResumeOpen()">resume</li>
+			<li id="contact">contact</li>
+		</ul>
 	</div>
-	<body  class="resume-body" [class.dontShow]="!showBody" [class.show]="showBody" (close)="toggleShowBody()"></body>
+	<body  class="resume-body" [class.dontShow]="resumeOpen" [class.show]="!resumeOpen" (close)="toggleResumeOpen()"></body>
 </div>
 
 		

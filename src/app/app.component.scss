@@ -1,9 +1,10 @@
 body{
-    width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
+    background-color: #3d3d3d !important;
     height: 100vh;
+    margin: 0 auto;
     max-height: 950px;
+    min-height: 100%;
+    width: 100%;
 }
 
 .dontShow{
@@ -13,65 +14,167 @@ body{
     z-index: 10;
 }
 .show{
+    opacity: 1;
     transition: 0.4s;
     transform: scale(1);
-    opacity: 1;
     z-index: 10;
 }
 
-.main-container{
-
-    .resume{
-      display: flex;
-      flex-direction: column;
-
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      align-items: stretch;
-      align-content: stretch;
-      margin: 0 auto;
-      max-width: 900px;
-      height: 100%;
-      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-  }
-}
 
 html {
-    min-height: 100%;
     margin: 0;
+    min-height: 100%;
 }
 
 h1, h2, h3, h4{
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-p{
-  font-family: 'Roboto', sans-serif;
-  word-spacing: 2px;
+p, li{
+    font-family: 'Roboto', sans-serif;
+    word-spacing: 2px;
 }
 
 img{
-  height: 50px;
-  margin-left: 10px;
-  width: 50px;
-  margin-top: 30px;
-  margin-bottom: -80px;
+    height: 50px;
+    margin-bottom: -80px;
+    margin-left: 10px;
+    margin-top: 30px;
+    width: 50px;
 }
 
 .placeholder{
-  img{
-    position: absolute;
-    top: 50%;
     bottom: 0;
-    right: 0;
+    display: inline-block;
     left: 0;
-    margin: 0 auto;
-    &.dontShow{
-      transition: 0.4s;
-      transform: scale(0.8);
-      opacity: 0;
-      z-index: 10;
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    .name-container{
+        position: absolute;
+        color: white;
+        left: 30px;
+        top: 75px;
+        h1{
+            letter-spacing: 5px;
+            font-size: 7em;
+            padding: 0;
+            margin: 0;
+            margin-top: -45px;
+        }
     }
-  }
+
+    ul{
+        color: white;
+        display: none;
+        font-size: 2em;
+        left: calc(50% - 45px);
+        list-style: none;
+        margin: 0;
+        margin-top: 0;
+        margin-bottom: 10px;
+        position: fixed;
+        padding: 0;
+        text-align: center;
+        top: calc(50% - 60px);
+
+        li{
+            cursor: pointer;
+            position: relative;
+            width: auto;
+
+            &:hover{
+                &#about{
+                    color: lightblue;
+                }
+                &#resume{
+                    color: #fe628e;
+                }
+                &#contact{
+                    color: lightblue;
+                }
+            }
+
+            &#about:before{
+                background-color: lightblue;
+            }
+            &#resume:before{
+                background-color: #fe628e;
+            }
+            &#contact:before{
+                background-color: lightblue;
+            }  
+
+            &:before{
+                bottom: 0;
+                content: '';
+                height: 25%;
+                left: 0;
+                margin: 0 auto;
+                position: absolute;
+                opacity: 0.5;
+                right: 0;
+                transform: scale3d(0,1,1);
+                transform-origin: 0% 50%;
+                transition: transform 0.5s;
+                transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+                width: 90%;
+                z-index: -1;
+
+            }
+            
+            &:hover{
+                &:before{
+                    transform: scale3d(1,1,1);
+                }
+            }
+        }
+    }
+    
+    .iross-logo{
+        cursor: pointer;
+        height: 100px;
+        left: calc(50% - 50px);
+        position: absolute;
+        margin: 0 auto;
+        top: calc(50% - 50px);
+        transition: 0.4s;
+        width: 100px;
+
+        &.show:hover{
+            transform: scale(1.2);
+        }
+
+        img{
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            transition: 0.4s;
+            width: 50px;
+        }
+
+        &.dontShow{
+            height: 450px;
+            left: calc(50% - 225px);
+            opacity: 0.1;
+            top: calc(50% - 225px);
+            transition: 0.4s;
+            width: 450px;
+            z-index: 10;
+            
+            ul{
+                display: block;
+            }
+
+            img{
+                height: 150px;
+                transition: 0.4s;
+                width: 150px;
+            }
+        }
+
+    }
 
 }
